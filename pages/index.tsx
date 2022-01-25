@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from 'next/link';
-import Footer from "@components/footer";
+import Footer from "../components/footer";
 import copy from 'copy-to-clipboard';
 import toast, { Toaster } from 'react-hot-toast';
 

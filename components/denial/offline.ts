@@ -7,10 +7,10 @@ const botOffline = () => {
       duration: 4000,
       position: 'bottom-right',
       icon: '👏',
-      className: 'flex items-center justify-center px-8 py-3 font-mono text-md font-medium text-color2 bg-dark border rounded border-color2',
+      className: 'flex items-center justify-center px-8 py-3 font-mono text-md font-medium text-color2 bg-dark border rounded border-slate-500',
       style:{
-        backgroundColor: '#1C1B24',
-        color: '#7047BC'
+        backgroundColor: '#1e293b',
+        color: '#ffffff'
       },
       iconTheme: {
         primary: '#ffff',

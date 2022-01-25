@@ -2,16 +2,19 @@ import Link from "next/link";
 import { useState } from "react";
 import cn from "classnames";
 import Image from "next/image";
+import { HomeIcon } from '@heroicons/react/outline';
+import { SupportIcon } from '@heroicons/react/outline';
+import { CodeIcon } from '@heroicons/react/outline';
 
 export default function Header() {
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
 
   return (
-    <header className="bg-darkish border border-color3">
+    <header className="bg-slate-800">
       <div className="flex flex-wrap items-center justify-between lg:container px-4 py-6 mx-auto md:flex-no-wrap md:px-6">
         <div className="flex items-center">
           <Image
-            src="https://cdn.infinitybots.xyz/images/gif/InfinityAnimated.gif"
+            src="/DBL.png"
             width={40}
             height={40}
             className="rounded-full"
@@ -21,7 +24,7 @@ export default function Header() {
 
           <Link href="/">
             <a className="text-lg md:text-xl font-bold ml-3 text-white">
-              IBL Cheat Sheet
+              DBL Templates
             </a>
           </Link>
         </div>
@@ -40,24 +43,22 @@ export default function Header() {
           </svg>
         </button>
 
-        <ul
-          className={cn(
-            "md:flex flex-col md:flex-row md:items-center md:justify-center text-sm w-full md:w-auto",
-            mobileMenuIsOpen ? `block` : `hidden`
-          )}
-        >
-          {[
-            { title: "Home", route: "/" },
-            { title: "Discord", route: "https://infinitybots.gg/discord" },
-            { title: "Website", route: "https://infinitybots.gg" },
-            { title: "Status", route: "https://status.botlist.site" },
-          ].map(({ route, title }) => (
-            <li className="mt-3 md:mt-0 md:ml-6" key={title}>
-              <Link href={route}>
-                <a className="block text-white">{title}</a>
-              </Link>
-            </li>
-          ))}
+        <ul className={cn("md:flex flex-col md:flex-row md:items-center md:justify-center text-sm w-full md:w-auto", mobileMenuIsOpen ? `block` : `hidden`)}>
+         <li className="mt-3 md:mt-0 md:ml-6" key='Home'>
+          <Link href='/'>
+            <a className="flex text-white"><HomeIcon className="w-5 h-5" />&nbsp;Home</a>
+          </Link>
+         </li>
+         <li className="mt-3 md:mt-0 md:ml-6" key='Support'>
+          <Link href='https://infinitybots.gg/discord'>
+          <a className="flex text-white" target="_blank"><SupportIcon className="w-5 h-5" />&nbsp;Support</a>
+          </Link>
+         </li>
+         <li className="mt-3 md:mt-0 md:ml-6" key='Source'>
+          <Link href='https://github.com/InfinityBotList/CheatSheet'>
+          <a className="flex text-white" target="_blank"><CodeIcon className="w-5 h-5" />&nbsp;Source</a>
+          </Link>
+         </li>
         </ul>
       </div>
     </header>

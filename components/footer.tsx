@@ -1,6 +1,8 @@
+import Image from "next/image";
+
 export default function Footer() {
   return (
-    <footer className="bg-darkish border border-color3">
+    <footer className="bg-slate-800">
       <ul className="flex items-center justify-between lg:container px-4 py-6 mx-auto text-sm text-white md:px-6">
         <li>
           Created by{" "}
@@ -21,7 +23,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="font-bold"
           >
-            Not associated with Discord
+            Not associated with <Image src="/discord.png" width={15} height={15} className="rounded-full" priority alt="logo" />
           </a>
         </li>
       </ul>
