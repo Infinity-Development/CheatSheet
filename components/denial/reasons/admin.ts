@@ -7,12 +7,14 @@ const adminNote = () => {
       duration: 4000,
       position: 'bottom-right',
       icon: '👏',
+      className: 'flex items-center justify-center px-8 py-3 font-mono text-md font-medium text-color2 bg-dark border rounded border-slate-500',
       style:{
-        backgroundColor: '#7289DA'
+        backgroundColor: '#1e293b',
+        color: '#ffffff'
       },
       iconTheme: {
         primary: '#ffff',
-        secondary: '#0000'
+        secondary: '#7047BC'
       }
     })
   };

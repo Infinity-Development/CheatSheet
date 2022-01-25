@@ -1,13 +1,17 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import cn from "classnames";
 import Image from "next/image";
-import { HomeIcon } from '@heroicons/react/outline';
-import { SupportIcon } from '@heroicons/react/outline';
-import { CodeIcon } from '@heroicons/react/outline';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useClickAway } from 'react-use'
+import { Route } from '../data/Routes'
 
 export default function Header() {
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
+  const [active, setActive] = useState(false)
+  const ref = useRef(null)
+  const toggleActive = () => setActive((active) => !active)
+  useClickAway(ref, () => setActive(false))
 
   return (
     <header className="bg-slate-800">
@@ -24,7 +28,7 @@ export default function Header() {
 
           <Link href="/">
             <a className="text-lg md:text-xl font-bold ml-3 text-white">
-              DBL Templates
+              DBL Staff Templates
             </a>
           </Link>
         </div>
@@ -46,17 +50,17 @@ export default function Header() {
         <ul className={cn("md:flex flex-col md:flex-row md:items-center md:justify-center text-sm w-full md:w-auto", mobileMenuIsOpen ? `block` : `hidden`)}>
          <li className="mt-3 md:mt-0 md:ml-6" key='Home'>
           <Link href='/'>
-            <a className="flex text-white"><HomeIcon className="w-5 h-5" />&nbsp;Home</a>
+            <a className="flex text-white hover:text-slate-500"><FontAwesomeIcon size="sm" icon={['fas', 'home']} />&nbsp;Home</a>
           </Link>
          </li>
          <li className="mt-3 md:mt-0 md:ml-6" key='Support'>
           <Link href='https://infinitybots.gg/discord'>
-          <a className="flex text-white" target="_blank"><SupportIcon className="w-5 h-5" />&nbsp;Support</a>
+            <a className="flex text-white hover:text-slate-500" target="_blank"><FontAwesomeIcon size="sm" icon={['fab', 'discord']} />&nbsp;Support Server</a>
           </Link>
          </li>
          <li className="mt-3 md:mt-0 md:ml-6" key='Source'>
           <Link href='https://github.com/InfinityBotList/CheatSheet'>
-          <a className="flex text-white" target="_blank"><CodeIcon className="w-5 h-5" />&nbsp;Source</a>
+            <a className="flex text-white hover:text-slate-500" target="_blank"><FontAwesomeIcon size="sm" icon={['fab', 'github']} />&nbsp;Source Code</a>
           </Link>
          </li>
         </ul>

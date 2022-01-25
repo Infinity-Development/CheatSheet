@@ -1,10 +1,13 @@
-import botOffline from "./offline";
-import apiAbuse from "./api-abuse";
-import codeLeak from "./code-leak";
-import dmAbuse from "./dm-abuse";
-import spamLongDesc from "./spam-ld";
-import botUnresponsive from "./unresponsive";
-import adminNote from './admin';
+import botOffline from "./reasons/offline";
+import apiAbuse from "./reasons/api-abuse";
+import codeLeak from "./reasons/code-leak";
+import dmAbuse from "./reasons/dm-abuse";
+import spamLongDesc from "./reasons/spam-ld";
+import botUnresponsive from "./reasons/unresponsive";
+import adminNote from './reasons/admin';
+import presenceAbuse from "./reasons/presenceAbuse";
+import noHelpCmd from "./reasons/noHelpCmd";
+import gorePromo from "./reasons/gorePromo";
 
 const denyFeatures = [
     {
@@ -35,27 +38,27 @@ const denyFeatures = [
     {
       name: '📵 Stopped Responding',
       description: 'Your bot stopped responding during testing due to this we are unable to continue the testing process.',
-      click: spamLongDesc
+      click: botUnresponsive
     },
     {
       name: '🛂 Open DM Commands',
       description: 'Your bot has a DM command/function which allows anyone to DM a user which can be used maliciously. The message your bot sends in DMs must state the author or that its from an anonymous user. It must also have a block/opt-out feature. Otherwise, remove this command entirely before resubmitting.',
-      click: spamLongDesc
+      click: dmAbuse
     },
     {
       name: '🌀 Presence/Status Abuse',
       description: 'Your bots presence changes every few seconds. The maximum frequency you can change your status is 5 times per 20 seconds any faster than that is considered as Discord API Abuse. We suggest you change it to something more reasonable, such as every 120 seconds.',
-      click: spamLongDesc
+      click: presenceAbuse
     },
     {
-      name: '❌ No Help Command',
+      name: '❌ No Help Command', 
       description: 'Your bot doesnt have a (working) help command or obvious point of entry. Please make sure your bot has a help command or has an explanation in the bot description. ',
-      click: spamLongDesc
+      click: noHelpCmd
     },
     {
       name: '🔪 Suicide/Gore Promotion',
       description: 'Your bot has a suicide command which is considered as glorification/promotion of suicide, which is against Discord ToS. Please remove this command entirely.',
-      click: spamLongDesc
+      click: gorePromo
     },
     {
       name: '🤖 BDFD Fork or Template',

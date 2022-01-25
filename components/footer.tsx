@@ -1,11 +1,28 @@
 import Image from "next/image";
+import { useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Footer() {
+
+  const googleTranslateElementInit = () => {
+    new window.google.translate.TranslateElement({ 
+      pageLanguage: 'en', 
+      layout: window.google.translate.TranslateElement.FloatPosition.TOP_LEFT 
+    }, 'google_translate_element')
+   }
+   
+   useEffect(() => {
+     var addScript = document.createElement('script');
+     addScript.setAttribute('src', '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit');
+     document.body.appendChild(addScript);
+     window.googleTranslateElementInit = googleTranslateElementInit;
+   }, [])
+
   return (
     <footer className="bg-slate-800">
       <ul className="flex items-center justify-between lg:container px-4 py-6 mx-auto text-sm text-white md:px-6">
         <li>
-          Created by{" "}
+          © 2022{" "}
           <a
             href="https://toxicdev.me/"
             target="_blank"
@@ -15,16 +32,8 @@ export default function Footer() {
             Toxic Dev
           </a>
         </li>
-
         <li>
-          <a
-            href="https://discord.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-bold"
-          >
-            Not associated with <Image src="/discord.png" width={15} height={15} className="rounded-full" priority alt="logo" />
-          </a>
+        <div id="google_translate_element"></div>
         </li>
       </ul>
     </footer>
