@@ -2,16 +2,16 @@ import Link from "next/link";
 import { useState, useRef } from "react";
 import cn from "classnames";
 import Image from "next/image";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useClickAway } from 'react-use'
-import { Route } from '../data/Routes'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useClickAway } from "react-use";
+import { Route } from "../data/Routes";
 
 export default function Header() {
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
-  const [active, setActive] = useState(false)
-  const ref = useRef(null)
-  const toggleActive = () => setActive((active) => !active)
-  useClickAway(ref, () => setActive(false))
+  const [active, setActive] = useState(false);
+  const ref = useRef(null);
+  const toggleActive = () => setActive((active) => !active);
+  useClickAway(ref, () => setActive(false));
 
   return (
     <header className="bg-slate-800">
@@ -47,22 +47,42 @@ export default function Header() {
           </svg>
         </button>
 
-        <ul className={cn("md:flex flex-col md:flex-row md:items-center md:justify-center text-sm w-full md:w-auto", mobileMenuIsOpen ? `block` : `hidden`)}>
-         <li className="mt-3 md:mt-0 md:ml-6" key='Home'>
-          <Link href='/'>
-            <a className="flex text-white hover:text-slate-500"><FontAwesomeIcon size="sm" icon={['fas', 'home']} />&nbsp;Home</a>
-          </Link>
-         </li>
-         <li className="mt-3 md:mt-0 md:ml-6" key='Support'>
-          <Link href='https://infinitybots.gg/discord'>
-            <a className="flex text-white hover:text-slate-500" target="_blank"><FontAwesomeIcon size="sm" icon={['fab', 'discord']} />&nbsp;Support Server</a>
-          </Link>
-         </li>
-         <li className="mt-3 md:mt-0 md:ml-6" key='Source'>
-          <Link href='https://github.com/InfinityBotList/CheatSheet'>
-            <a className="flex text-white hover:text-slate-500" target="_blank"><FontAwesomeIcon size="sm" icon={['fab', 'github']} />&nbsp;Source Code</a>
-          </Link>
-         </li>
+        <ul
+          className={cn(
+            "md:flex flex-col md:flex-row md:items-center md:justify-center text-sm w-full md:w-auto",
+            mobileMenuIsOpen ? `block` : `hidden`
+          )}
+        >
+          <li className="mt-3 md:mt-0 md:ml-6" key="Home">
+            <Link href="/">
+              <a className="flex text-white hover:text-slate-500">
+                <FontAwesomeIcon size="sm" icon={["fas", "home"]} />
+                &nbsp;Home
+              </a>
+            </Link>
+          </li>
+          <li className="mt-3 md:mt-0 md:ml-6" key="Support">
+            <Link href="https://infinitybots.gg/discord">
+              <a
+                className="flex text-white hover:text-slate-500"
+                target="_blank"
+              >
+                <FontAwesomeIcon size="sm" icon={["fab", "discord"]} />
+                &nbsp;Support Server
+              </a>
+            </Link>
+          </li>
+          <li className="mt-3 md:mt-0 md:ml-6" key="Source">
+            <Link href="https://github.com/InfinityBotList/CheatSheet">
+              <a
+                className="flex text-white hover:text-slate-500"
+                target="_blank"
+              >
+                <FontAwesomeIcon size="sm" icon={["fab", "github"]} />
+                &nbsp;Source Code
+              </a>
+            </Link>
+          </li>
         </ul>
       </div>
     </header>
