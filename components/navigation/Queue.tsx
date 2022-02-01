@@ -1,20 +1,19 @@
-
-import NextLink from 'next/link'
-import { v4 as uuidv4 } from 'uuid'
-import { useState, useRef } from 'react'
-import { useClickAway } from 'react-use'
-import { motion, AnimatePresence } from 'framer-motion'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { RouteData } from '../../data/Routes';
+import NextLink from "next/link";
+import { v4 as uuidv4 } from "uuid";
+import { useState, useRef } from "react";
+import { useClickAway } from "react-use";
+import { motion, AnimatePresence } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { RouteData } from "../../data/Routes";
 
 export const DropLink = ({
   page,
   href,
   setActive,
 }: {
-  page: string
-  href: string
-  setActive: (active: boolean) => void
+  page: string;
+  href: string;
+  setActive: (active: boolean) => void;
 }) => {
   return (
     <NextLink href={href}>
@@ -25,14 +24,14 @@ export const DropLink = ({
         {page}
       </a>
     </NextLink>
-  )
-}
+  );
+};
 
 export const QueueTemplates = () => {
-  const [active, setActive] = useState(false)
-  const ref = useRef(null)
-  const toggleActive = () => setActive((active) => !active)
-  useClickAway(ref, () => setActive(false))
+  const [active, setActive] = useState(false);
+  const ref = useRef(null);
+  const toggleActive = () => setActive((active) => !active);
+  useClickAway(ref, () => setActive(false));
 
   return (
     <div ref={ref}>
@@ -41,8 +40,13 @@ export const QueueTemplates = () => {
         onMouseOver={() => toggleActive()}
         aria-label="Dropdown"
         className="flex items-center justify-center focus:outline-none mr-10 transition duration-300 ease-in-out text-white hover:text-color2 dark:hover:text-indigo-200"
-      > Reasons&nbsp;
-        <FontAwesomeIcon className="w-4 h-4" icon={[active ? 'fas' : 'fas', 'caret-down']} />
+      >
+        {" "}
+        Reasons&nbsp;
+        <FontAwesomeIcon
+          className="w-4 h-4"
+          icon={[active ? "fas" : "fas", "caret-down"]}
+        />
       </button>
       <AnimatePresence>
         {active && (
@@ -54,12 +58,19 @@ export const QueueTemplates = () => {
             onMouseLeave={() => setActive(false)}
             className="text-xs absolute border border-black bg-slate-800 dark:border-white text-white dark:bg-black py-3 pl-4 pr-12 rounded mt-4 grid gap-3"
           >
-            {RouteData.filter((route) => route.type === 'Queue').map((route) => (
-              <DropLink key={uuidv4()} page={route.name} href={route.href} setActive={setActive} />
-            ))}
+            {RouteData.filter((route) => route.type === "Queue").map(
+              (route) => (
+                <DropLink
+                  key={uuidv4()}
+                  page={route.name}
+                  href={route.href}
+                  setActive={setActive}
+                />
+              )
+            )}
           </motion.div>
         )}
       </AnimatePresence>
     </div>
-  )
-}
+  );
+};

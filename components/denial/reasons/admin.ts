@@ -1,22 +1,25 @@
-import copy from 'copy-to-clipboard';
-import toast, { Toaster } from 'react-hot-toast';
+import copy from "copy-to-clipboard";
+import toast, { Toaster } from "react-hot-toast";
 
 const adminNote = () => {
-    copy('Some of your bots features require the bot itself to have the ADMINISTRATOR permission. NO bot requires administrator permissions to function. Please only require the permissions your bot truly needs.');
-    toast.success('Copied to clipboard!', {
-      duration: 4000,
-      position: 'bottom-right',
-      icon: '👏',
-      className: 'flex items-center justify-center px-8 py-3 font-mono text-md font-medium text-color2 bg-dark border rounded border-slate-500',
-      style:{
-        backgroundColor: '#1e293b',
-        color: '#ffffff'
-      },
-      iconTheme: {
-        primary: '#ffff',
-        secondary: '#7047BC'
-      }
-    })
-  };
+  copy(
+    "Some of your bots features require the bot itself to have the ADMINISTRATOR permission. NO bot requires administrator permissions to function. Please only require the permissions your bot truly needs."
+  );
+  toast.success("Copied to clipboard!", {
+    duration: 4000,
+    position: "bottom-right",
+    icon: "👏",
+    className:
+      "flex items-center justify-center px-8 py-3 font-mono text-md font-medium text-color2 bg-dark border rounded border-slate-500",
+    style: {
+      backgroundColor: "#1e293b",
+      color: "#ffffff",
+    },
+    iconTheme: {
+      primary: "#ffff",
+      secondary: "#7047BC",
+    },
+  });
+};
 
-  export default adminNote;
+export default adminNote;

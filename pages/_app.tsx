@@ -1,7 +1,7 @@
 import "../css/index.css";
 import Head from "next/head";
 import Layout from "../components/layout";
-import '../library/fontAwesome';
+import "../library/fontAwesome";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -12,8 +12,14 @@ function MyApp({ Component, pageProps }) {
         <meta name="theme-color" content="#7289DA" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="Content-Language" content="en" />
-        <meta name="description" content="Official Documentation for the Infinity Bot List Website, Discord Server, Staff Team and API" />
-        <meta name="og:description" content="Official Documentation for the Infinity Bot List Website, Discord Server, Staff Team and API" />
+        <meta
+          name="description"
+          content="Official Documentation for the Infinity Bot List Website, Discord Server, Staff Team and API"
+        />
+        <meta
+          name="og:description"
+          content="Official Documentation for the Infinity Bot List Website, Discord Server, Staff Team and API"
+        />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content="/TempBanner.png" />
         <meta name="twitter:site:domain" content="temp.botlist.site" />
