@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Footer from "../components/footer";
 import copy from 'copy-to-clipboard';
 import toast, { Toaster } from 'react-hot-toast';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function IndexPage() {
   return (
@@ -24,7 +25,6 @@ export default function IndexPage() {
               </a>
             </Link>
           </div>
-
           <div className="relative mt-3 rounded-md sm:mt-0 sm:ml-3">
             <Link href="/denial">
               <a className="flex items-center justify-center w-full px-8 py-3 font-mono text-base no-underline font-medium text-white bg-black border border-transparent border-gray-200 rounded-md bg-opacity-5 dark:bg-white dark:text-white dark:border-gray-700 dark:bg-opacity-5 betterhover:hover:bg-slate-500 betterhover:dark:hover:bg-color1 md:py-3 md:text-base md:leading-6 md:px-10">

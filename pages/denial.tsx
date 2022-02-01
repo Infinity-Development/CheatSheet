@@ -14,7 +14,7 @@ export default function DenialPage() {
           </span>{' '}
       </h1>
       <p className="max-w-lg mx-auto mt-6 text-3xl font-medium leading-tight text-center text-gray-400 sm:max-w-4xl sm:text-2xl md:text-3xl lg:text-4xl">
-          Pre-Configured list of Reasons why a Bot has been denied
+          Pre-Configured list of Bot Denial Reasons
       </p>
         <div className="grid grid-cols-1 mt-12 gap-x-6 gap-y-12 sm:grid-cols-2 lg:mt-16 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-12">
           {denyFeatures.map((feature) => (

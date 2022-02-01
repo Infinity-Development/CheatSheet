@@ -8,6 +8,20 @@ import adminNote from './reasons/admin';
 import presenceAbuse from "./reasons/presenceAbuse";
 import noHelpCmd from "./reasons/noHelpCmd";
 import gorePromo from "./reasons/gorePromo";
+import bdfdFork from "./reasons/bdfdFork";
+import crossPromo from "./reasons/crossPromo";
+import flashyContent from "./reasons/flashyContent";
+import nsfwContent from "./reasons/nsfwContent";
+import ossFork from "./reasons/ossFork";
+import join4Join from "./reasons/join4join"; 
+import flaggedBot from "./reasons/flaggedBot";
+import noFunctions from "./reasons/noFunctions";
+import ownerBanned from "./reasons/ownerBanned";
+import adminBots from "./reasons/adminBots";
+import unknownApp from "./reasons/unknownApp";
+import brokenCommands from "./reasons/brokenCommands";
+import pubDevCmds from "./reasons/pubDevCmds";
+import multiInstance from "./reasons/multiInstance";
 
 const denyFeatures = [
     {
@@ -63,72 +77,72 @@ const denyFeatures = [
     {
       name: '🤖 BDFD Fork or Template',
       description: 'Your bot seems to be an unmodified instance of [Bot Designer for Discord.](https://botdesignerdiscord.com/) We dont allow unmodified clones of other bots or bot creation services.',
-      click: spamLongDesc
+      click: bdfdFork
     },
     {
       name: '👀 Cross Promotion',
       description: 'Your bots page is filled out with a link/button to another bot listing website. Please remove any references to other bot listing websites in your description and re-apply.',
-      click: spamLongDesc
+      click: crossPromo
     },
     {
       name: '🏨 Seizure Inducing Content',
       description: 'Your bots commands have emojis or gifs that could cause epileptic seizures due to its flashy and flickering nature. Please remove all content of such nature in your commands.',
-      click: spamLongDesc
+      click: flashyContent
     },
     {
       name: '🔞 NSFW Features/Content',
       description: 'Your bot page mentions, or promotes NSFW functions in its descriptions. Please remove any mentioning of NSFW features and make sure that all the NSFW functions are locked for [NSFW channels](https://support.discord.com/hc/en-us/articles/115000084051-NSFW-Channels-and-Content).',
-      click: spamLongDesc
+      click: nsfwContent
     },
     {
       name: '⚙️ Unmodified Instance',
-      description: 'Your bot seems to be an unmodified instance of another bot. We dont allow unmodified clones of other bots.  Please note for BotGhost/BDFD clones in particular, we require 5 or more custom commands.',
-      click: spamLongDesc
+      description: 'Your bot seems to be an unmodified instance of: [Link to Bot](https://somelink.com). We dont allow unmodified clones of other bots.  Please note for BotGhost/BDFD clones in particular, we require 5 or more custom commands.',
+      click: ossFork
     },
     {
       name: '🔖 J4J/Third Party Ads',
       description: 'Your bot is promoting sponsors/partners/servers. Bots are not allowed to use the Discord API to advertise/promote any third - party service. As stated in their [Terms](https://i.imgur.com/eTLRu3m.png), You may not use the APIs in any way to target users with advertisements or marketing. If your bot has a Join4Join feature, please read Discords stance regarding bots of this nature here or join the [Discord Developers](https://discord.gg/discord-developers) server for more information.',
-      click: spamLongDesc
+      click: join4Join
     },
     {
       name: '⚠️ Flagged/Banned Bot',
       description: 'Your bot has been flagged by Discord for one of the following reasons (Spam, Abusive Behaviour, Reaching guild limit without verification, Verified successfully by Discord but using privileged intents that your application was not whitelisted for.) which results in us being unable to test your bot. For more information, please reach out Discord directly [here](https://dis.gd/contact) if you have questions. Please resolve this issue before reapplying.',
-      click: spamLongDesc
+      click: flaggedBot
     },
     {
       name: '🤷‍♂️ No Functions/Features',
       description: 'Your bot doesnt have any actual (functioning) features/commands. We require a bot to have a minimum of at least 7 Working Commands not including the Help and About Commands. Please add some features and or commands to your bot before re-applying!',
-      click: spamLongDesc
+      click: noFunctions
     },
     {
       name: '⚖️ Main Owner Banned',
       description: 'The primary owner of this bot was banned from our discord server. As such they are prohibited from adding any bots. They can however appeal any and all bans by contacting our Support Team',
-      click: spamLongDesc
+      click: ownerBanned
     },
     {
       name: '⚔️ Admin Bots',
       description: 'Your bot is asking for the admin permission on invite. No bot should require this kind of permission to function correctly.',
-      click: spamLongDesc
+      click: adminBots
     },
     {
       name: '🤔 Unknown Application',
       description: 'There is an unknown application error when trying to invite your bot. Please make sure that the application ID you entered is correct, you have a bot user with your application and your bot application wasnt deleted',
-      click: spamLongDesc
+      click: unknownApp
     },
     {
       name: '💻 Broken Commands',
       description: 'The majority of your commands listed on your bots page, or help command do not provide a response, or do not seem to function/work. Please resolve this issue and resubmit!',
-      click: spamLongDesc
+      click: brokenCommands
     },
     {
       name: '🔓 Public Owner/Dev Commands',
       description: 'Your bot has an owner only command/s that allows users to access potential vulnerabilities or features that should be locked to developers. Please lock these commands for developers/owners only and re-apply.',
-      click: spamLongDesc
+      click: pubDevCmds
     },
     {
       name: '👨‍👩‍👧‍👦 Running Multiple Instances',
       description: 'Your bot application seems to be running multiple instances, which could cause unhandled ratelimits and api abuse, as well as spam. Please be sure that your bot isnt running on multiple instances prior to resubmitting.',
-      click: spamLongDesc
+      click: multiInstance
     },
   ];
 
