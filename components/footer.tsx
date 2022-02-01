@@ -18,7 +18,10 @@ export default function Footer() {
           </a>
         </li>
         <li>
-          Not associated with <a href="https://discord.com" className="hover:text-slate-500"><FontAwesomeIcon size="sm" icon={['fab', 'discord']} /></a>
+          Not associated with{" "}
+          <a href="https://discord.com" className="hover:text-slate-500">
+            <FontAwesomeIcon size="sm" icon={["fab", "discord"]} />
+          </a>
         </li>
       </ul>
     </footer>
