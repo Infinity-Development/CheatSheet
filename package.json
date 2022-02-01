@@ -1,6 +1,6 @@
 {
   "name": "bot-list-templates",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Templates and Cheat Sheets for any and all Bot List Staff",
   "main": "index.js",
   "scripts": {
