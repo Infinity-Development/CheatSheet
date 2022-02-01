@@ -1,6 +1,20 @@
 # Infinity Cheat Sheet
 Pre-Configured list of templates that any Bot List or Bot List Staff are free to use!
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/af5e50fd-05c3-4c55-aa6c-f43ba50f10ca/deploy-status)](https://app.netlify.com/sites/jolly-perlman-ff66de/deploys)
+
+---
+
+## Website Preview
+<div>
+  <iframe id="inlineFrameExample"
+      title="Inline Frame Example"
+      width="300"
+      height="200"
+      src="temp.botlist.site">
+  </iframe>
+</div>
+
 ---
 
 ## Contributing
