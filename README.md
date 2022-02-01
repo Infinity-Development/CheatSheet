@@ -6,14 +6,8 @@ Pre-Configured list of templates that any Bot List or Bot List Staff are free to
 ---
 
 ## Website Preview
-<div>
-  <iframe id="inlineFrameExample"
-      title="Inline Frame Example"
-      width="300"
-      height="200"
-      src="temp.botlist.site">
-  </iframe>
-</div>
+![Sample-1](https://i.imgur.com/mN98bcG.png)
+![Sample-2](https://i.imgur.com/Pw6Pob5.png)
 
 ---
 
