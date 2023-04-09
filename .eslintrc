@@ -1,0 +1,31 @@
+{
+  "extends": ["next/core-web-vitals"],
+  "rules": {
+      /** 
+         NEXTJS BASED ESLINT RULES 
+      */
+      "@next/next/no-img-element": "off",
+      "@next/next/no-css-tags": "off",
+      "@next/next/no-sync-scripts": "off",
+      "@next/next/no-html-link-for-pages": "off",
+      "@next/next/google-font-display": "off",
+      "@next/next/no-document-import-in-page": "off",
+      /** 
+         REACT BASED ESLINT RULES 
+      */
+      "react/display-name": "off",
+      "react/no-children-prop": "off",
+      "react/no-unknown-property": "off",
+      "react/no-unescaped-entities": "off",
+      /** 
+         LEAVE THESE RULES OFF (BREAKS FUNCTIONALITY)
+         OR NEED TO LOOK INTO React.useCallback() 
+       */
+      "react-hooks/exhaustive-deps": "off",
+      "react-hooks/rules-of-hooks": "off",
+      /** ------------------------------------------ */
+      "react/jsx-no-target-blank": "off",
+      "jsx-a11y/alt-text": "off",
+      "react/jsx-key": "off"
+  }
+}
