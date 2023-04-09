@@ -19,6 +19,9 @@
   },
   "homepage": "https://github.com/InfinityBotList/CheatSheet#readme",
   "dependencies": {
+    "@types/node": "^14.14.19",
+    "@types/react": "^17.0.37",
+    "@types/uuid": "^8",
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
     "@fortawesome/free-regular-svg-icons": "^5.15.1",
@@ -39,9 +42,6 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "@types/node": "^14.14.19",
-    "@types/react": "^17.0.37",
-    "@types/uuid": "^8",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
     "@heroicons/react": "^1.0.5",
